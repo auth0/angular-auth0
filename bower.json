@@ -1,0 +1,11 @@
+{
+  "name": "angular-auth0",
+  "main": "angular-auth0.js",
+  "dependencies": {
+    "angular": "*",
+    "auth0.js": "7.0.4"
+  },
+  "resolutions": {
+    "angular": "1.5.8"
+  }
+}
