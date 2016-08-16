@@ -1,0 +1,16 @@
+{
+  "name": "angular-auth0",
+  "version": "1.0.0",
+  "description": "Auth0.js wrapper for Angular.js",
+  "main": "angular-auth0.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/auth0/angular-auth0.git"
+  },
+  "author": "Auth0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/auth0/angular-auth0/issues"
+  },
+  "homepage": "https://github.com/auth0/angular-auth0#readme"
+}
