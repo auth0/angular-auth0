@@ -20,8 +20,6 @@
       this.callbackURL = config.callbackURL;
     };
 
-    this.$inject = ['$rootScope'];
-
     this.$get = function($rootScope) {
 
       var Auth0Js = new Auth0(
