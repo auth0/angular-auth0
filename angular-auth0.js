@@ -5,7 +5,7 @@
   angular
     .module('auth0.auth0', [])
     .provider('angularAuth0', angularAuth0);
-  
+
   function angularAuth0() {
     if (typeof Auth0 !== 'function') {
       throw new Error('Auth0 must be loaded.');
@@ -38,24 +38,13 @@
         }
       }
 
-      function safeApply(fn) {
-        var phase = $rootScope.$root.$$phase;
-        if(phase === '$apply' || phase === '$digest') {
-          if(fn && (typeof(fn) === 'function')) {
-            fn();
-          }
-        } else {
-          $rootScope.$apply(fn);
-        }
-      }
-
       function wrapArguments(parameters) {
         var lastIndex = parameters.length - 1,
           func = parameters[lastIndex];
         if(typeof func === 'function') {
           parameters[lastIndex] = function() {
             var args = arguments;
-            safeApply(function() {
+            $rootScope.$evalAsync(function() {
               func.apply(Auth0Js, args)
             })
           }
