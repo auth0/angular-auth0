@@ -1,13 +1,13 @@
-;(function() {
+(function() {
 
   'use strict';
 
   angular
     .module('auth0.auth0', [])
     .provider('angularAuth0', angularAuth0);
-  
+
   function angularAuth0() {
-    if (typeof Auth0 !== 'function') {
+    if (!angular.isFunction(Auth0)) {
       throw new Error('Auth0 must be loaded.');
     }
 
@@ -22,56 +22,43 @@
 
     this.$get = function($rootScope) {
 
-      var Auth0Js = new Auth0(
-        {
-          domain: this.domain,
-          clientID: this.clientID,
-          callbackURL: this.callbackURL,
-          callbackOnLocationHash: true
-        }
-      );
+      var Auth0Js = new Auth0({
+        domain: this.domain,
+        clientID: this.clientID,
+        callbackURL: this.callbackURL,
+        callbackOnLocationHash: true,
+      });
       var auth0 = {};
       var functions = [];
       for (var i in Auth0Js) {
-        if(typeof Auth0Js[i] === 'function') {
+        if (angular.isFunction(Auth0Js[i])) {
           functions.push(i);
-        }
-      }
-
-      function safeApply(fn) {
-        var phase = $rootScope.$root.$$phase;
-        if(phase === '$apply' || phase === '$digest') {
-          if(fn && (typeof(fn) === 'function')) {
-            fn();
-          }
-        } else {
-          $rootScope.$apply(fn);
         }
       }
 
       function wrapArguments(parameters) {
         var lastIndex = parameters.length - 1,
           func = parameters[lastIndex];
-        if(typeof func === 'function') {
+        if (angular.isFunction(func)) {
           parameters[lastIndex] = function() {
             var args = arguments;
-            safeApply(function() {
-              func.apply(Auth0Js, args)
-            })
-          }
+            $rootScope.$evalAsync(function() {
+              func.apply(Auth0Js, args);
+            });
+          };
         }
         return parameters;
       }
 
       for (var i = 0; i < functions.length; i++) {
-        auth0[functions[i]]  = (function(name){
+        auth0[functions[i]] = (function(name) {
           var customFunction = function() {
-            return Auth0Js[name].apply(Auth0Js, wrapArguments(arguments) );
+            return Auth0Js[name].apply(Auth0Js, wrapArguments(arguments));
           };
           return customFunction;
         })(functions[i]);
       }
       return auth0;
-    }
+    };
   }
 })();
