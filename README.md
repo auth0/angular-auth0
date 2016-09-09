@@ -2,6 +2,8 @@
 
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
+See the [sample project](https://github.com/auth0-samples/auth0-angularjs-sample/tree/master/02-Custom-Login) for further detail on how to use angular-auth0.
+
 ## Installation
 
 **Bower**
@@ -10,7 +12,7 @@ This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/librar
 bower install angular-auth0
 ```
 
-Ensure that both Auth0.js and angular-auth0 are loaded on the page.
+Ensure that both `auth0.js` and `angular-auth0.js` are loaded on the page.
 
 ```html
 ...
@@ -29,23 +31,27 @@ Bring in the `auth0.auth0` module.
 var app = angular.module('myApp', ['auth0.auth0']);
 ```
 
-Configure Auth0.js by using `auth0Provider`. If you haven't done so yet, [sign up for Auth0](https://auth0.com/signup), create a client app, and get your clientID and domain. To learn more about Auth0.js' API and the options it takes, see the [API documentation](hhttps://auth0.com/docs/libraries/auth0js).
+Configure Auth0.js by using `angularAuth0Provider`. If you haven't done so yet, [sign up for Auth0](https://auth0.com/signup), create a client app, and get your clientID and domain. To learn more about Auth0.js' API and the options it takes, see the [API documentation](hhttps://auth0.com/docs/libraries/auth0js).
 
 ```js
 app.config(function(auth0Provider) {
-  auth0Provider.init({
+
+  angularAuth0Provider.init({
     clientID: AUTH0_CLIENT_ID,
     domain: AUTH0_DOMAIN
   });
+  
 });
 ```
 
-Use `auth` in the `run` block, in a service, or in a controller. For example, log in using Auth0.js from a controller and associated view.
+Use `auth0.js` from a controller or service.
 
 ```js
-app.controller('loginController', function(auth) {
+app.controller('loginController', function(angularAuth0) {
+
   var vm = this;
-  vm.auth = auth;
+  vm.angularAuth0 = angularAuth0;
+  
 });
 ```
 
