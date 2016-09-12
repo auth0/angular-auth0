@@ -18,6 +18,8 @@
       this.domain = config.domain;
       this.clientID = config.clientID;
       this.callbackURL = config.callbackURL;
+      this.responseType = config.responseType;
+      this.responseMode = config.responseMode;
     };
 
     this.$get = ["$rootScope", function($rootScope) {
@@ -26,7 +28,8 @@
         domain: this.domain,
         clientID: this.clientID,
         callbackURL: this.callbackURL,
-        callbackOnLocationHash: true,
+        responseMode: this.responseMode,
+        responseType: this.responseType
       });
       var auth0 = {};
       var functions = [];
