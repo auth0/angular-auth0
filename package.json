@@ -19,5 +19,9 @@
     "gulp-ng-annotate": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0"
+  },
+  "peerDependencies": {
+    "angular": "^1.5.8",
+    "auth0": "^7.2.0"
   }
 }

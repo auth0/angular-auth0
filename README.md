@@ -31,7 +31,7 @@ Bring in the `auth0.auth0` module.
 var app = angular.module('myApp', ['auth0.auth0']);
 ```
 
-Configure Auth0.js by using `angularAuth0Provider`. If you haven't done so yet, [sign up for Auth0](https://auth0.com/signup), create a client app, and get your clientID and domain. To learn more about Auth0.js' API and the options it takes, see the [API documentation](hhttps://auth0.com/docs/libraries/auth0js).
+Configure Auth0.js by using `angularAuth0Provider`. If you haven't done so yet, [sign up for Auth0](https://auth0.com/signup), create a client app, and get your clientID and domain. To learn more about Auth0.js' API and the options it takes, see the [API documentation](https://auth0.com/docs/libraries/auth0js).
 
 ```js
 app.config(function(angularAuth0Provider) {
