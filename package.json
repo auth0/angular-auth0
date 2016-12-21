@@ -2,7 +2,7 @@
   "name": "angular-auth0",
   "version": "1.0.4",
   "description": "Auth0.js wrapper for Angular.js",
-  "main": "angular-auth0.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/auth0/angular-auth0.git"
