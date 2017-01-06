@@ -7,7 +7,7 @@
     .provider('angularAuth0', angularAuth0);
 
   function angularAuth0() {
-    if (!angular.isFunction(Auth0)) {
+    if (!angular.isFunction(auth0)) {
       throw new Error('Auth0 must be loaded.');
     }
 
@@ -17,21 +17,27 @@
       }
       this.domain = config.domain;
       this.clientID = config.clientID;
-      this.callbackURL = config.callbackURL;
+      this.redirectUri = config.redirectUri,
+      this.scope = config.scope;
+      this.audience = config.audience;
       this.responseType = config.responseType;
       this.responseMode = config.responseMode;
-    };
+      this._disableDeprecationWarnings = config._disableDeprecationWarnings;
+    }
 
     this.$get = ["$rootScope", function($rootScope) {
 
-      var Auth0Js = new Auth0({
+      var Auth0Js = new auth0.WebAuth({
         domain: this.domain,
         clientID: this.clientID,
-        callbackURL: this.callbackURL,
+        redirectUri: this.redirectUri,
+        scope: this.scope,
+        audience: this.audience,
+        responseType: this.responseType,
         responseMode: this.responseMode,
-        responseType: this.responseType
+        _disableDeprecationWarnings: this._disableDeprecationWarnings
       });
-      var auth0 = {};
+      var webAuth = {};
       var functions = [];
       for (var i in Auth0Js) {
         if (angular.isFunction(Auth0Js[i])) {
@@ -54,14 +60,14 @@
       }
 
       for (var i = 0; i < functions.length; i++) {
-        auth0[functions[i]] = (function(name) {
+        webAuth[functions[i]] = (function(name) {
           var customFunction = function() {
             return Auth0Js[name].apply(Auth0Js, wrapArguments(arguments));
           };
           return customFunction;
         })(functions[i]);
       }
-      return auth0;
+      return webAuth;
     }];
   }
 })();

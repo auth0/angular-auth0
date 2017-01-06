@@ -1,6 +1,6 @@
 {
   "name": "angular-auth0",
-  "version": "1.0.5",
+  "version": "2.0.0-beta.0",
   "description": "Auth0.js wrapper for Angular.js",
   "main": "index.js",
   "repository": {
@@ -22,6 +22,6 @@
   },
   "peerDependencies": {
     "angular": "^1.5.8",
-    "auth0-js": "^7.2.0"
+    "auth0-js": "^8.0.0"
   }
 }
