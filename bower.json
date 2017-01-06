@@ -1,7 +1,7 @@
 {
   "name": "angular-auth0",
   "main": "angular-auth0.js",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "dependencies": {
     "angular": "*",
     "auth0.js": "^8.0.0"

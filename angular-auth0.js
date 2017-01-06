@@ -7,7 +7,7 @@
     .provider('angularAuth0', angularAuth0);
 
   function angularAuth0() {
-    if (!angular.isFunction(auth0)) {
+    if (!angular.isObject(auth0)) {
       throw new Error('Auth0 must be loaded.');
     }
 
@@ -42,6 +42,9 @@
       for (var i in Auth0Js) {
         if (angular.isFunction(Auth0Js[i])) {
           functions.push(i);
+        }
+        if (angular.isObject(Auth0Js[i])) {
+          webAuth[i] = Auth0Js[i];
         }
       }
 
