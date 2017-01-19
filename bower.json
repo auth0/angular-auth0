@@ -4,7 +4,7 @@
   "version": "1.0.5",
   "dependencies": {
     "angular": "*",
-    "auth0.js": "^7.2.0"
+    "auth0.js": "^7.6.0"
   },
   "resolutions": {
     "angular": "1.5.8"

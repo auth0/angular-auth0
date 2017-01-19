@@ -2,7 +2,7 @@
 
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
-> Note: angular-auth0 v1 is to be used with auth0.js v7.
+> Note: angular-auth0 v1 is to be used with auth0.js v7. For use with auth0.js v8, see the [v2 branch](https://github.com/auth0/angular-auth0/tree/v2).
 
 See the [sample project](https://github.com/auth0-samples/auth0-angularjs-sample/tree/master/02-Custom-Login) for further detail on how to use angular-auth0.
 
