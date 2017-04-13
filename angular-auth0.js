@@ -20,6 +20,7 @@
       this.callbackURL = config.callbackURL;
       this.responseType = config.responseType;
       this.responseMode = config.responseMode;
+      this.scope = config.scope;
     };
 
     this.$get = ["$rootScope", function($rootScope) {
@@ -29,7 +30,8 @@
         clientID: this.clientID,
         callbackURL: this.callbackURL,
         responseMode: this.responseMode,
-        responseType: this.responseType
+        responseType: this.responseType,
+        scope: this.scope
       });
       var auth0 = {};
       var functions = [];
