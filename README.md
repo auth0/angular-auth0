@@ -1,4 +1,5 @@
 # Auth0.js for Angular 1.x
+[![CDNJS](https://img.shields.io/cdnjs/v/angular-auth0.svg)](https://cdnjs.com/libraries/angular-auth0)
 
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
