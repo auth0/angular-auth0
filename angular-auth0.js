@@ -15,22 +15,12 @@
       if (!config) {
         throw new Error('clientID and domain must be provided to auth0');
       }
-      this.domain = config.domain;
-      this.clientID = config.clientID;
-      this.callbackURL = config.callbackURL;
-      this.responseType = config.responseType;
-      this.responseMode = config.responseMode;
+      this.config = config;
     };
 
     this.$get = ["$rootScope", function($rootScope) {
 
-      var Auth0Js = new Auth0({
-        domain: this.domain,
-        clientID: this.clientID,
-        callbackURL: this.callbackURL,
-        responseMode: this.responseMode,
-        responseType: this.responseType
-      });
+      var Auth0Js = new Auth0(this.config);
       var auth0 = {};
       var functions = [];
       for (var i in Auth0Js) {
