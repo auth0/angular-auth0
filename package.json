@@ -1,6 +1,6 @@
 {
   "name": "angular-auth0",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Auth0.js wrapper for Angular.js",
   "main": "index.js",
   "repository": {

@@ -15,28 +15,12 @@
       if (!config) {
         throw new Error('clientID and domain must be provided to auth0');
       }
-      this.domain = config.domain;
-      this.clientID = config.clientID;
-      this.redirectUri = config.redirectUri,
-      this.scope = config.scope;
-      this.audience = config.audience;
-      this.responseType = config.responseType;
-      this.responseMode = config.responseMode;
-      this._disableDeprecationWarnings = config._disableDeprecationWarnings;
+      this.config = config;      
     }
 
     this.$get = ["$rootScope", function($rootScope) {
 
-      var Auth0Js = new auth0.WebAuth({
-        domain: this.domain,
-        clientID: this.clientID,
-        redirectUri: this.redirectUri,
-        scope: this.scope,
-        audience: this.audience,
-        responseType: this.responseType,
-        responseMode: this.responseMode,
-        _disableDeprecationWarnings: this._disableDeprecationWarnings
-      });
+      var Auth0Js = new auth0.WebAuth(this.config);
       var webAuth = {};
       var functions = [];
       for (var i in Auth0Js) {
