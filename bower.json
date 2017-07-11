@@ -1,12 +1,12 @@
 {
   "name": "angular-auth0",
-  "main": "angular-auth0.js",
-  "version": "1.0.7",
+  "main": "dist/angular-auth0.js",
+  "version": "2.0.0",
   "dependencies": {
     "angular": "*",
-    "auth0.js": "^7.6.0"
+    "auth0.js": "^8.8.0"
   },
   "resolutions": {
-    "angular": "1.5.8"
+    "angular": "1.6.0"
   }
 }
