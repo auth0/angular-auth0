@@ -1,24 +1,34 @@
-# Auth0.js for Angular 1.x
+# Angular 1.x Wrapper for Auth0.js
 
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
-> Note: angular-auth0 v1 is to be used with auth0.js v7.
-
-See the [sample project](https://github.com/auth0-samples/auth0-angularjs-sample/tree/master/02-Custom-Login) for further detail on how to use angular-auth0.
+> Note: This is the v2 branch which is for use with auth0.js v8. angular-auth0 v1 is to be used with auth0.js v7.
 
 ## Installation
 
-**Bower**
-
 ```bash
-bower install angular-auth0
+# installation with npm
+npm install --save angular-auth0
+
+# installation with yarn
+yarn add angular-auth0
+
+# installation with bower
+bower install --save angular-auth0
 ```
 
 Ensure that both `auth0.js` and `angular-auth0.js` are loaded on the page.
 
 ```html
+<!-- installed with npm or yarn --> 
+<script src="node_modules/auth0-js/build/auth0.js"></script>
+<script src="node_modules/angular-auth0/dist/angular-auth0.js"></script>
+```
+
+```html
+<!-- installed with bower --> 
 <script src="bower_components/auth0.js/build/auth0.js"></script>
-<script src="bower_components/angular-auth0/build/angular-auth0.js"></script>
+<script src="bower_components/angular-auth0/dist/angular-auth0.js"></script>
 ```
 
 ## Usage
@@ -54,9 +64,9 @@ app.controller('loginController', function(angularAuth0) {
 ```
 
 ```html
-<div ng-controller="loginController as login">
+<div ng-controller="loginController as vm">
 
-  <button ng-click="login.login(options)">Log In</button>
+  <button ng-click="vm.login(options)">Log In</button>
 
 </div>
 ```
