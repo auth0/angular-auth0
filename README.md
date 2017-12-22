@@ -3,7 +3,10 @@
 
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
-### This is angular-auth0 v2 which is to be used with auth0.js v8 and higher. For use with auth0.js v7, install angular-auth0 v1.
+### This is angular-auth0 v3 which is to be used with auth0.js v9 and higher. 
+
+- For use with auth0.js v8, install angular-auth0 v2.
+- For use with auth0.js v7, install angular-auth0 v1.
 
 ## Installation
 

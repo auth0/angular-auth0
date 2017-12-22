@@ -1,7 +1,7 @@
 {
   "name": "angular-auth0",
-  "version": "2.0.0",
-  "description": "Auth0.js wrapper for Angular.js",
+  "version": "3.0.0",
+  "description": "Auth0.js v9 wrapper for Angular.js",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -22,7 +22,7 @@
     "webpack": "^3.1.0"
   },
   "dependencies": {
-    "angular": "^1.6.0",
+    "angular": "^1.6.8",
     "auth0-js": "^9.0.0"
   }
 }
