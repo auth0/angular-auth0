@@ -1,7 +1,7 @@
 {
   "name": "angular-auth0",
   "main": "dist/angular-auth0.js",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "dependencies": {
     "angular": "*",
     "auth0.js": "^9.0.0"
