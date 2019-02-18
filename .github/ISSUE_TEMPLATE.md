@@ -1,6 +1,6 @@
 In order to efficiently and accurately address your issue or feature request, please read through the template below and answer all relevant questions. Your additional work here is greatly appreciated and will help us respond as quickly as possible. Please delete any sections or questions below that do not pertain to this request.
 
-For general support or usage questions, please use the [Auth0 Community](https://community.auth0.com/) or [Auth0 Support](https://support.auth0.com.).
+For general support or usage questions, please use the [Auth0 Community](https://community.auth0.com/) or [Auth0 Support](https://support.auth0.com).
 
 ### Description
 
@@ -22,11 +22,10 @@ Description of the bug or feature request and why it's a problem. Consider inclu
 
 Please provide the following:
 
-- Version of the library being used
-- Version of the platform or framework used, if applicable
-- Relevant environmental versions (language version, server software, OS version)
-- Browser version, if applicable
-- Additional modules/plugins/add-ons that might be affecting your instance
+- Version of `angular-auth0` used:
+- Version of Angular used:
+- Browser version tested:
+- Additional modules/plugins/add-ons that might be affecting your instance:
 
 ### Reproduction
 
