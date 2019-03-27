@@ -73,6 +73,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_auth0_js__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_auth0_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_auth0_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__version__ = __webpack_require__(3);
+
 
 
 
@@ -97,6 +99,14 @@ function angularAuth0() {
   this.$get = [
     '$rootScope',
     function($rootScope) {
+      if (this.config._telemetryInfo) {
+
+      } else {
+        this.config._telemetryInfo = {
+          name: 'angular-auth0',
+          version: __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */]
+        }
+      }
       var Auth0Js = new __WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a.WebAuth(this.config);
       var webAuth = {};
       var functions = [];
@@ -150,6 +160,13 @@ module.exports = angular;
 /***/ (function(module, exports) {
 
 module.exports = auth0;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ('3.0.0');
 
 /***/ })
 /******/ ]);

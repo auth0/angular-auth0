@@ -1,5 +1,6 @@
 import angular from 'angular';
 import auth0 from 'auth0-js';
+import version from './version';
 
 if (typeof angular !== 'object') {
   throw new Error('Angular must be loaded.');
@@ -15,6 +16,19 @@ function angularAuth0() {
   this.init = function(config) {
     if (!config) {
       throw new Error('Client ID and Domain are required to initialize Auth0.js');
+    }
+    if (config._telemetryInfo) {
+      config._telemetryInfo.env = angular.extend({}, this.config._telemetryInfo.env, {
+        'angular-auth0': version
+      });
+    } else {
+      config._telemetryInfo = {
+        name: 'angular-auth0',
+        version: version,
+        env: {
+          'auth0-js': auth0.version.raw
+        }
+      }
     }
     this.config = config;
   };
