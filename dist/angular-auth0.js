@@ -93,20 +93,25 @@ function angularAuth0() {
     if (!config) {
       throw new Error('Client ID and Domain are required to initialize Auth0.js');
     }
+    if (config._telemetryInfo) {
+      config._telemetryInfo.env = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.extend({}, this.config._telemetryInfo.env, {
+        'angular-auth0': __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */]
+      });
+    } else {
+      config._telemetryInfo = {
+        name: 'angular-auth0',
+        version: __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */],
+        env: {
+          'auth0-js': __WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a.version.raw
+        }
+      }
+    }
     this.config = config;
   };
 
   this.$get = [
     '$rootScope',
     function($rootScope) {
-      if (this.config._telemetryInfo) {
-
-      } else {
-        this.config._telemetryInfo = {
-          name: 'angular-auth0',
-          version: __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */]
-        }
-      }
       var Auth0Js = new __WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a.WebAuth(this.config);
       var webAuth = {};
       var functions = [];
@@ -166,7 +171,7 @@ module.exports = auth0;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ('3.0.0');
+/* harmony default export */ __webpack_exports__["a"] = ('3.0.2');
 
 /***/ })
 /******/ ]);
