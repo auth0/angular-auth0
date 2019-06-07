@@ -1,9 +1,10 @@
 {
   "name": "angular-auth0",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Auth0.js v9 wrapper for Angular.js",
   "main": "index.js",
   "scripts": {
+    "version": "node update-telemetry && npm run build && git add -A dist && git add -A src/version.js",
     "build": "webpack",
     "build:watch": "webpack --progress --colors --watch"
   },
