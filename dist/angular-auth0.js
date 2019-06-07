@@ -171,7 +171,7 @@ module.exports = auth0;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ('3.0.3');
+/* harmony default export */ __webpack_exports__["a"] = ('3.0.4');
 
 /***/ })
 /******/ ]);
