@@ -1,6 +1,6 @@
 {
   "name": "angular-auth0",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Auth0.js v9 wrapper for Angular.js",
   "main": "index.js",
   "scripts": {
@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "angular": "^1.7.9",
-    "auth0-js": "^9.12.0"
+    "auth0-js": "^9.12.1"
   }
 }
