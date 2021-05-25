@@ -3,7 +3,7 @@
   "main": "dist/angular-auth0.js",
   "dependencies": {
     "angular": "*",
-    "auth0.js": "^9.16.0"
+    "auth0.js": "^9.16.1"
   },
   "resolutions": {
     "angular": "1.8.0"

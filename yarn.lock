@@ -216,13 +216,13 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
   integrity sha1-x57Zf380y48robyXkLzDZkdLS3k=
 
-auth0-js@^9.12.2:
-  version "9.16.0"
-  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.16.0.tgz#102e0332e7f83c976d94a63d2226bcc8bf5d75f1"
-  integrity sha512-I9jECErKZviVPVg0hKfG7URiGV/woyd0JOnh1SKH7Vy4/9n+AkJXgZqF7ayGV5W8sHKJl2aZ3ve3fc50LfR07g==
+auth0-js@^9.16.1:
+  version "9.16.1"
+  resolved "https://registry.yarnpkg.com/auth0-js/-/auth0-js-9.16.1.tgz#9e87d2543c488b27838ee2beb4e295710be80a34"
+  integrity sha512-y9R4xuXIWTQB7cV4ensYwCDGiPoQSyjVnKCj1wf4Y1XGOuORj/in8w7szPdl8F9tYS+bpyndgA2Up58JcljD3w==
   dependencies:
     base64-js "^1.3.0"
-    idtoken-verifier "^2.0.3"
+    idtoken-verifier "^2.1.1"
     js-cookie "^2.2.0"
     qs "^6.7.0"
     superagent "^5.3.1"
@@ -318,10 +318,10 @@ cross-spawn@^7.0.3:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-crypto-js@^3.2.1:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-3.3.0.tgz#846dd1cce2f68aacfa156c8578f926a609b7976b"
-  integrity sha512-DIT51nX0dCfKltpRiXV+/TVZq+Qq2NgF4644+K7Ttnla7zEzqc+kjJyiB96BHNyUTBxyjzRcZYpUdZa+QAqi6Q==
+crypto-js@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/crypto-js/-/crypto-js-4.0.0.tgz#2904ab2677a9d042856a2ea2ef80de92e4a36dcc"
+  integrity sha512-bzHZN8Pn+gS7DQA6n+iUmBfl0hO5DJq++QP3U6uTucDtk/0iGpXd/Gg7CGR0p8tJhofJyaKoWBuJI4eAO00BBg==
 
 debug@^4.1.1:
   version "4.3.1"
@@ -511,13 +511,13 @@ human-signals@^2.1.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-idtoken-verifier@^2.0.3:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/idtoken-verifier/-/idtoken-verifier-2.1.0.tgz#e61ea083be596390012aff6d9f12c2599af4847b"
-  integrity sha512-X0423UM4Rc5bFb39Ai0YHr35rcexlu4oakKdYzSGZxtoPy84P86hhAbzlpgbgomcLOFRgzgKRvhY7YjO5g8OPA==
+idtoken-verifier@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/idtoken-verifier/-/idtoken-verifier-2.1.1.tgz#f9c92a62be11286d21f78cc4b0de2fce7708f685"
+  integrity sha512-nUdRiU6GOH7MOtpOK6WJTGftoFzviVraSaLi+KKwp+K7hu+PUpvxfCwOOvzKBqzJ78b+nL1qfyzkjbvrMYQ4Xw==
   dependencies:
     base64-js "^1.3.0"
-    crypto-js "^3.2.1"
+    crypto-js "^4.0.0"
     es6-promise "^4.2.8"
     jsbn "^1.1.0"
     unfetch "^4.1.0"
