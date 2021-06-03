@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/auth0/angular-auth0#readme",
   "devDependencies": {
-    "babili-webpack-plugin": "^0.1.2",
-    "webpack": "^3.1.0"
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
   },
   "dependencies": {
     "angular": "^1.8.0",
-    "auth0-js": "^9.12.2"
+    "auth0-js": "^9.16.1"
   }
 }

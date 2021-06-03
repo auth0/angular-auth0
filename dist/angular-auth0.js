@@ -1,92 +1,64 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
+/******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_angular___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_angular__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_auth0_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_auth0_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_auth0_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__version__ = __webpack_require__(3);
+;// CONCATENATED MODULE: external "angular"
+var external_angular_namespaceObject = angular;
+var external_angular_default = /*#__PURE__*/__webpack_require__.n(external_angular_namespaceObject);
+;// CONCATENATED MODULE: external "auth0"
+var external_auth0_namespaceObject = auth0;
+var external_auth0_default = /*#__PURE__*/__webpack_require__.n(external_auth0_namespaceObject);
+;// CONCATENATED MODULE: ./src/version.js
+/* harmony default export */ var version = ("3.0.6");
+
+;// CONCATENATED MODULE: ./src/index.js
 
 
 
 
-if (typeof __WEBPACK_IMPORTED_MODULE_0_angular___default.a !== 'object') {
+if (typeof (external_angular_default()) !== 'object') {
   throw new Error('Angular must be loaded.');
 }
 
-if (!__WEBPACK_IMPORTED_MODULE_0_angular___default.a.isObject(__WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a)) {
+if (!external_angular_default().isObject((external_auth0_default()))) {
   throw new Error('Auth0 must be loaded.');
 }
 
-__WEBPACK_IMPORTED_MODULE_0_angular___default.a.module('auth0.auth0', []).provider('angularAuth0', angularAuth0);
+external_angular_default().module('auth0.auth0', []).provider('angularAuth0', angularAuth0);
 
 function angularAuth0() {
   this.init = function(config) {
@@ -94,15 +66,15 @@ function angularAuth0() {
       throw new Error('Client ID and Domain are required to initialize Auth0.js');
     }
     if (config._telemetryInfo) {
-      config._telemetryInfo.env = __WEBPACK_IMPORTED_MODULE_0_angular___default.a.extend({}, this.config._telemetryInfo.env, {
-        'angular-auth0': __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */]
+      config._telemetryInfo.env = external_angular_default().extend({}, this.config._telemetryInfo.env, {
+        'angular-auth0': version
       });
     } else {
       config._telemetryInfo = {
         name: 'angular-auth0',
-        version: __WEBPACK_IMPORTED_MODULE_2__version__["a" /* default */],
+        version: version,
         env: {
-          'auth0-js': __WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a.version.raw
+          'auth0-js': (external_auth0_default()).version.raw
         }
       }
     }
@@ -112,15 +84,15 @@ function angularAuth0() {
   this.$get = [
     '$rootScope',
     function($rootScope) {
-      var Auth0Js = new __WEBPACK_IMPORTED_MODULE_1_auth0_js___default.a.WebAuth(this.config);
+      var Auth0Js = new (external_auth0_default()).WebAuth(this.config);
       var webAuth = {};
       var functions = [];
 
       for (var i in Auth0Js) {
-        if (__WEBPACK_IMPORTED_MODULE_0_angular___default.a.isFunction(Auth0Js[i])) {
+        if (external_angular_default().isFunction(Auth0Js[i])) {
           functions.push(i);
         }
-        if (__WEBPACK_IMPORTED_MODULE_0_angular___default.a.isObject(Auth0Js[i])) {
+        if (external_angular_default().isObject(Auth0Js[i])) {
           webAuth[i] = Auth0Js[i];
         }
       }
@@ -128,7 +100,7 @@ function angularAuth0() {
       function wrapArguments(parameters) {
         var lastIndex = parameters.length - 1,
           func = parameters[lastIndex];
-        if (__WEBPACK_IMPORTED_MODULE_0_angular___default.a.isFunction(func)) {
+        if (external_angular_default().isFunction(func)) {
           parameters[lastIndex] = function() {
             var args = arguments;
             $rootScope.$evalAsync(function() {
@@ -153,26 +125,5 @@ function angularAuth0() {
   ];
 }
 
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-module.exports = angular;
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = auth0;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ("3.0.6");
-
-
-/***/ })
-/******/ ]);
+/******/ })()
+;
