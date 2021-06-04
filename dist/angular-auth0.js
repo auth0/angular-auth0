@@ -43,8 +43,7 @@ var external_angular_default = /*#__PURE__*/__webpack_require__.n(external_angul
 var external_auth0_namespaceObject = auth0;
 var external_auth0_default = /*#__PURE__*/__webpack_require__.n(external_auth0_namespaceObject);
 ;// CONCATENATED MODULE: ./src/version.js
-/* harmony default export */ var version = ("3.0.6");
-
+/* harmony default export */ var version = ('3.1.0');
 ;// CONCATENATED MODULE: ./src/index.js
 
 
