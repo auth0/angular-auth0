@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "angular": "^1.8.0",
-    "auth0-js": "^9.16.1"
+    "auth0-js": "^9.16.2"
   }
 }
