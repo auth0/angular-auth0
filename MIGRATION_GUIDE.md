@@ -2,7 +2,7 @@
 
 The following is a guide for developers wishing to migrate from using the `angular-auth0` library to `auth0-angular`.
 
-There is no direct upgrade path from `angular-auth0` to another SDK that supports [AngularJS](http://angularjs.org/). As such, the recommended approach is to upgrade your app to [Angular](https://angular.io/) and use our [Auth0 Angular SDK](https://github.com/auth0/auth0-angular) that fully supports modern versions of Angular.
+There is **no direct upgrade path** from `angular-auth0` to another SDK that supports [AngularJS](http://angularjs.org/). As such, the recommended approach is to upgrade your app to [Angular](https://angular.io/) and use our [Auth0 Angular SDK](https://github.com/auth0/auth0-angular) that fully supports modern versions of Angular.
 
 If upgrading your application is not possible, consider constructing a wrapper around an alternative SDK, such as [Auth0.js](https://github.com/auth0/auth0.js) or [Auth0 SPA SDK](https://github.com/auth0/auth0-spa-js).
 
