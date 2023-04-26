@@ -1,6 +1,9 @@
 # Angular 1.x Wrapper for Auth0.js
 [![CDNJS version](https://img.shields.io/cdnjs/v/angular-auth0.svg)](https://cdnjs.com/libraries/angular-auth0)
 
+> **Warning**
+> This module has been deprecated, as support for [AngularJS](https://angularjs.org/) ended in January 2022. This module will reach end-of-life on October 31, 2023. See the [Migration Guide](./MIGRATION_GUIDE.md) for more information.
+
 This module provides a thin wrapper for [auth0.js](https://auth0.com/docs/libraries/auth0js).
 
 ### This is angular-auth0 v3 which is to be used with auth0.js v9 and higher. 
